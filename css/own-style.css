@@ -1,0 +1,10 @@
+.msg-box {
+	border: dotted 1px;
+	border-radius:5px;
+	padding:5px;
+	margin:0 0 5px 0;
+}
+.selected-div {
+	border: solid #449d44;
+	//background: blue;
+}
