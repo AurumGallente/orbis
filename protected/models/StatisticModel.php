@@ -25,7 +25,7 @@ class StatisticModel {
 					<td>$item[listenerTitle]</td>
 					<td>$status</td>
 					<td>";
-			echo ($item['moderatedTime'] != 0) ? date("d-m-Y H:i:s",$item['moderatedTime']) : '';
+			echo ($item[moderatedTime] != 0) ? date("d-m-Y H:i:s",$item[moderatedTime]) : "";
 			echo	"</td>
 				</tr>";
 		}

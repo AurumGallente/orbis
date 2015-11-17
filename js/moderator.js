@@ -1,14 +1,14 @@
 $(document).ready(function(){
 	
 	setInterval(function(){
-		//console.log(divIdDel);
+		
 		var req = getXmlHttpRequest();
 		req.onreadystatechange = function()
 			{
 				if (req.readyState != 4) return;
-				//console.log(div);
+				
 				var json = eval( '('+req.responseText+')' );
-				//console.log("fromModel "+req.responseText);
+				
 				var toPrepend ="";
 				
 				//отрисовываем новое сообщение

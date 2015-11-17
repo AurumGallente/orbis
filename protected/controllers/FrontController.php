@@ -1,8 +1,9 @@
 <?php
-class FrontController extends config {
+class FrontController {
 	protected $_controller, $_action, $_params, $_body;
 	static $_instance;
-	private $db_connect;
+	
+
 	public static function getInstance() {
 		if(!(self::$_instance instanceof self)) 
 			self::$_instance = new self();
@@ -57,20 +58,16 @@ class FrontController extends config {
 	}
 	//Подключение к базе
 	public function connect () {
-        if(isset($this->db_connect)){
-            return $this->db_connect;
-        }
-        else {
-            $dsn = $this->dsn;
-            $user = $this->user;
-            $password = $this->password;
-            try {
-                $this->db_connect = new PDO($dsn, $user, $password);
-                return $this->db_connect;
-            } catch (PDOException $e) {
-                echo 'Подключение не удалось: ' . $e->getMessage();
-            }
-        }
+		$dsn = 'mysql:dbname=orbis;host=127.0.0.1';
+		$user = 'mysql';
+		$password = 'mysql';
+		try {
+			$dbh = new PDO($dsn, $user, $password);
+			
+			return $dbh;
+		} catch (PDOException $e) {
+			echo 'Подключение не удалось: ' . $e->getMessage();
+		}
 	}
 	public function getParams() {
 		return $this->_params;
