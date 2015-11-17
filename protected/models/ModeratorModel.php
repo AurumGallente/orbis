@@ -12,7 +12,7 @@ class ModeratorModel {
 				FROM `listener` 
 					WHERE status = 0 OR (status = 1 AND reporterAnswer <> '') 
 						ORDER BY createTime
-		";
+		";        
 		$sth = $dbh->prepare($sql);
 		$sth->execute();
 		$result = $sth->fetchAll(PDO::FETCH_ASSOC);

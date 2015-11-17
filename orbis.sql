@@ -28,11 +28,11 @@ SET time_zone = "+00:00";
 
 CREATE TABLE IF NOT EXISTS `listener` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `listenerName` varchar(255) CHARACTER SET cp1251 NOT NULL,
-  `listenerTitle` varchar(255) CHARACTER SET cp1251 NOT NULL,
-  `listenerMsg` text CHARACTER SET cp1251 NOT NULL,
+  `listenerName` varchar(255) CHARACTER SET utf8 NOT NULL,
+  `listenerTitle` varchar(255) CHARACTER SET utf8 NOT NULL,
+  `listenerMsg` text CHARACTER SET utf8 NOT NULL,
   `status` int(11) DEFAULT NULL,
-  `reporterAnswer` text CHARACTER SET cp1251 NOT NULL,
+  `reporterAnswer` text CHARACTER SET utf8 NOT NULL,
   `createTime` int(20) NOT NULL,
   `moderatedTime` int(20) NOT NULL,
   `answeredTime` int(20) NOT NULL,
